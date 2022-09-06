@@ -107,7 +107,7 @@
     infoOffensiveItem = "%s";
     infoModerationNote = "Moderatora piezīme: %s";
     infoDebug = "Atkļ. Inform.: %s ffffffff-ffff-ffff-ffff-ffffffff "
-    __DISCLAIMER__ = "THE FOLLOWING LINES WILL DEFINE THE BAN REASONS AND SOME OTHER THINGS. SOME OF THEM ARE WEIRD OR DISGUSTING AND/OR BOTH. dont ban the code please";
+    ["X++DISCLAIMER++X"] = "THE FOLLOWING LINES WILL DEFINE THE BAN REASONS AND SOME OTHER THINGS. SOME OF THEM ARE WEIRD OR DISGUSTING AND/OR BOTH. dont ban the code please";
     banReasons = {
       swearing = "Lamāšanās";
       harrassment = "Uzmākšanās";
