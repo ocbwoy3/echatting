@@ -107,7 +107,7 @@
     infoOffensiveItem = "Offensive item: %s";
     infoModerationNote = "Moderator note: %s";
     infoDebug = "Debug info: %s ffffffff-ffff-ffff-ffff-ffffffff "
-    __DISCLAIMER__ = "THE FOLLOWING LINES WILL DEFINE THE BAN REASONS AND SOME OTHER THINGS. SOME OF THEM ARE WEIRD OR DISGUSTING AND/OR BOTH. dont ban the code please";
+    ["X++DISCLAIMER++X"] = "THE FOLLOWING LINES WILL DEFINE THE BAN REASONS AND SOME OTHER THINGS. SOME OF THEM ARE WEIRD OR DISGUSTING AND/OR BOTH. dont ban the code please";
     banReasons = {
       swearing = "Swearing";
       harrassment = "Harassment";
