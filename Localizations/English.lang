@@ -1,0 +1,131 @@
+{
+  greeting = "Welcome to E-Chatting!";
+  genders = {
+    male = "Male";
+    female = "Female";
+    nonbinary = "Non-Binary";
+    private = "XX+PRIVATE+HIDDEN+XX";
+  };
+  favouriteServers = "Favourite servers: %s";
+  none = "None";
+  updateEntries = "Update Entries";
+  updatingEntries = "Updating entries...";
+  entryUpdateProgressbar1 = "Updating entry ";
+  entryUpdateProgressbar2 = " of %s";
+  menuBarCategories = {
+    view = "View";
+    settings = "Settings";
+    help = "Help";
+  };
+  account = "Account";
+  settings = "Settings";
+  about = "About E-Chatting";
+  close = "Close E-Chatting";
+  addEntry = "Add entry";
+  credits = {
+    "E-Chatting is a simple OpenComputers chat app that allows you to chat with minecraft players on the internet!";
+    "";
+    "Made by OCboy3";
+    "github: ocboy3/EChatting";
+    "E-Chatting is open source and licensed under the MIT license.";
+    "";
+    "(This app is not affiliated with Mojang or Minecraft.)";
+    "Credits: all entirely to me.";
+  };
+  entryEditor = {
+    ign = "IGN";
+    useAlias = "Use nickname: ";
+    alias = "Nickname";
+    age = "Age";
+    ageTooltip = "-1 to make it private";
+    gender = "Gender";
+    genderTooltip = "Refer to the genderMap in the code.";
+    genderMap = "1: Male, 2: Female, 3: Non-Binary, 4: Private";
+    purpose = "Bio (why use app)";
+    hasFavouriteServer = "Use favourite server #1: ";
+    favouriteServer = "Favourite server #%s";
+    useFavouriteServer = "Use favourite server #2: ";
+    addEntryButton = "Add entry";
+    error = "An error has occurred!";
+    rawEntry = "Raw entry";   
+    success = "Success!";
+  };
+  developer = {
+    entryUpdate = "Entry database updated";
+    entryReload = "GUI reloaded";
+    entryGetAll = "Entry list requested";
+    entryUpdateFail = "Entry update failed";
+  };
+  qpanel = {
+    account = "Account: %s (%s)";
+    account_13plus = "13+";
+    account_13minus = "<13";
+  };
+  account = {
+    title_settings = "Account settings";
+    tooltip_settings = "Where you manage your E-Chatting account.";
+    username = "Minecraft IGN: %s";
+    alias = "Nickname: %s";
+    not_exists = "[not set]";
+    email = "E-mail: %s";
+    phone = "Phone number: %s";
+  };
+  login = {
+    password = "Password";
+    username = "E-mail or phone number";
+    confirm = "Log in";
+    failedNetwork = "There was an error with the server. Please try again.";
+    failedLogin = "Wrong username, phone number and/or password.";
+  };
+  misc = {
+    commonFirstName = "John";
+    commonLastName = "Doe";
+    examplePhoneNumber = "+1 (420) 420-6969";
+    usesStateCode = true;
+    countryCode = "+1";
+    alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    loginTitleWelcome = "Welcome to E-Chatting!";
+    loginSubtitle = " ";
+    loginSubtitle2 = "Log into E-Chatting";
+    sponsored = "Sponsored by OCboy3";
+  };
+  popups = {
+    premium_upsell1 = "Abonējiet E-Chatting premium, lai atbloķētu labāku pieredzi!";
+    premium_upsell2 = "Abonējiet E-Chatting premium uz gadu un ietaupiet 20%!";
+  };
+  specificEntry = {
+    isFriends = "(You are friends!)";
+    isBestFriends = "(You are best friends!)";
+    admin = "(Admin)";
+    premium = "(E-Chatting Premium)";
+  };
+  banned = {
+    titleForever = "Account deleted";
+    titleTime = "Account banned";
+    titleWarning = "Warning";
+    infoReason = "Reason: %s";
+    infoOffensiveItem = "Offensive item: %s";
+    infoModerationNote = "Moderator note: %s";
+    infoDebug = "Debug info: %s ffffffff-ffff-ffff-ffff-ffffffff "
+    __DISCLAIMER__ = "THE FOLLOWING LINES WILL DEFINE THE BAN REASONS AND SOME OTHER THINGS. SOME OF THEM ARE WEIRD OR DISGUSTING AND/OR BOTH. dont ban the code please";
+    banReasons = {
+      swearing = "Swearing";
+      harrassment = "Harassment";
+      racism = "Racism";
+      innappropriateLanguage = "Innappropriate language";
+      suidiceThreats = "Suicide threats";
+      repeatedViolation = "Repeated rule violations";
+      other = "Something else";
+      dating = "E-Dating"
+    };
+    suicideHotline_US = "+1 800-273-8255";
+    suicideHotline_National = "+1 800-273-8255";
+    CPS_US = "+1 800-422-4453";
+    CPS_National = "+1 800-422-4453";
+    Police_US = "911";
+    Police_National = "911";
+    Call = "If you are feeling unsafe and/or theatened, call the CPS or 911!";
+    Call_Serious_CPS = "CALL THE CPS";
+    Call_Serious_POLICE = "CALL 911";
+  }
+}
