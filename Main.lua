@@ -83,9 +83,12 @@ local userLoggedIn = false
 -- If age is -1, it is considered as "private" and won't be shown
 -- If gender is 4 then it considered "private" and won't be shown (refer to genderMap)
 
+-- bruh man nav ko darīt pls dodiet idejas so boring tbh roans un gustavs ir npc
+
 local entries = {
   {"BranzyCraft","Branzy",-1,4,'E-Chatting - Test',{'Lifesteal SMP','EchoCraft','Hypixel, I guess?'}};  
-  {"echatting-test","test account",-1,4,'test',{"Hypixel"}}
+  {"echatting-test","test account",-1,4,'test',{"Hypixel"}};
+  {"OCboy3","echatting.locale.test_desc",-1,4,'echatting.locale.test_play',{"Hypixel"}};
 }
 
 local entriesObj = {}
@@ -115,17 +118,17 @@ local function updateEntries()
 
 end
 
-function _G.ec_setEntries(entry)
+function _G.ecdevbeta_setEntries(entry)
   entries = entry
   GUI.alert(localization.developer.entryUpdate)
 end
 
-function _G.ec_reloadGui()
+function _G.ecdevbeta_reloadGui()
   updateEntries()
   GUI.alert(localization.developer.entryReload)
 end
 
-function _G.ec_getAll()
+function _G.ecdevbeta_getAll()
   GUI.alert(localization.developer.entryGetAll)
   return entries
 end
