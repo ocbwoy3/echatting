@@ -1,7 +1,6 @@
 local echatting = {}
-echatting.UserSearch = {
--- regular expression
-BlockedTerms = {"*🔞*}
+echatting.ModerationPublic = {
+    BannedWords = {"innapropriate language"}
 }
 
 return echatting -- wip

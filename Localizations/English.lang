@@ -107,7 +107,7 @@
     infoOffensiveItem = "Offensive item: %s";
     infoModerationNote = "Moderator note: %s";
     infoDebug = "Debug info: %s ffffffff-ffff-ffff-ffff-ffffffff "
-    ["X++DISCLAIMER++X"] = "THE FOLLOWING LINES WILL DEFINE THE BAN REASONS AND SOME OTHER THINGS. SOME OF THEM ARE WEIRD OR DISGUSTING AND/OR BOTH. dont ban the code please";
+    ["XX-ECHATTING-DEVELOPMENT-DISCLAIMER-XX"] = "THE FOLLOWING LINES WILL DEFINE THE BAN REASONS AND SOME OTHER THINGS. SOME OF THEM ARE WEIRD OR DISGUSTING AND/OR BOTH. dont ban the code please";
     banReasons = {
       swearing = "Swearing";
       harrassment = "Harassment";
@@ -127,5 +127,6 @@
     Call = "If you are feeling unsafe and/or theatened, call the CPS or 911!";
     Call_Serious_CPS = "CALL THE CPS";
     Call_Serious_POLICE = "CALL 911";
+    Trusted_Number = "echatting.locale.unknown";
   }
 }

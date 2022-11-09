@@ -107,7 +107,7 @@
     infoOffensiveItem = "%s";
     infoModerationNote = "Moderatora piezīme: %s";
     infoDebug = "Atkļ. Inform.: %s ffffffff-ffff-ffff-ffff-ffffffff "
-    ["X++DISCLAIMER++X"] = "THE FOLLOWING LINES WILL DEFINE THE BAN REASONS AND SOME OTHER THINGS. SOME OF THEM ARE WEIRD OR DISGUSTING AND/OR BOTH. dont ban the code please";
+    ["XX-ECHATTING-DEVELOPMENT-DISCLAIMER-XX"] = "THE FOLLOWING LINES WILL DEFINE THE BAN REASONS AND SOME OTHER THINGS. SOME OF THEM ARE WEIRD OR DISGUSTING AND/OR BOTH. dont ban the code please";
     banReasons = {
       swearing = "Lamāšanās";
       harrassment = "Uzmākšanās";
@@ -128,5 +128,7 @@
     Call = "Ja jūties nedrošs/a vai esat apdraudēts/a, zvanat Diennakts uzticības tālrunim 116111 vai 112!";
     Call_Serious_CPS = "ZVANAT 116111";
     Call_Serious_POLICE = "ZVANAT 112";
+    Trusted_Number = "11611";
   };
+
 }
