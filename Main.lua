@@ -41,7 +41,7 @@ local workspace, window, menu = system.addWindow(GUI.filledWindow(1, 1, 60*1.5, 
 --local menu = workspace:addChild(GUI.menu(1, 1, workspace.width, 0xEEEEEE, 0x666666, 0x3366CC, 0xFFFFFF))
 
 -- Get localization table dependent of current system language
-local localization = system.getCurrentScriptLocalization()
+--local localization = system.getCurrentScriptLocalization()
 
 -- Add single cell layout to window
 local layout = window:addChild(GUI.layout(1, 1, window.width, window.height, 1, 1))
@@ -51,10 +51,11 @@ function addString(ok)
 end
 
 local genderMap = {
-  localization.genders.male;
-  localization.genders.female;
-  localization.genders.nonbinary;
-  localization.genders.private;
+ -- Use temprorary fix
+  "Male"; --localization.genders.male;
+  "Female"; -- localization.genders.female;
+  "Non-Binary"; -- localization.genders.nonbinary;
+  ""; --localization.genders.private;
 }
 
 function addEntry(user_data)
@@ -86,11 +87,11 @@ function addEntry(user_data)
   end
 
   local line2 = tostring(purpose)
-  local line3 = localization.favouriteServers:format(localization.none)
+  local line3 = "Favourite servers: None" --localization.favouriteServers:format(localization.none)
   local line3x = ""
 
   if favourite_servers then
-    line3 = localization.favouriteServers
+    line3 = "Favourite servers: " --localization.favouriteServers
     line3x = line3x .. tostring(favourite_servers[1])
     if favourite_servers[2] then
       line3x = line3x .. ", " .. tostring(favourite_servers[2])
@@ -123,7 +124,7 @@ local entriesObj = {}
 local function updateEntries()
   local allEntries = #entries
   -- Add a background container to workspace with background panel and layout
-  local container = GUI.addBackgroundContainer(workspace, true, true, localization.updatingEntries)
+  local container = GUI.addBackgroundContainer(workspace, true, true, "Updating entries")
   -- Add a switch and label to it's layout
   local pg = container.layout:addChild(GUI.progressBar(2, 2, 80, 0x3366CC, 0xEEEEEE, 0xEEEEEE, 80, true, true)) --, localization.entryUpdateProgressbar1, localization.entryUpdateProgressbar2:format(#entries)))
 
@@ -147,30 +148,30 @@ end
 
 function _G.ecdevbeta_setEntries(entry)
   entries = entry
-  GUI.alert(localization.developer.entryUpdate)
+  GUI.alert("echatting.developer.updateEntries") --localization.developer.entryUpdate)
 end
 
 function _G.ecdevbeta_reloadGui()
   updateEntries()
-  GUI.alert(localization.developer.entryReload)
+  GUI.alert("echatting.developer.reloadGui") --localization.developer.entryReload)
 end
 
 function _G.ecdevbeta_getAll()
-  GUI.alert(localization.developer.entryGetAll)
+  GUI.alert("echatting.developer.getAllEntries") --localization.developer.entryGetAll)
   return entries
 end
 
 menu:removeChildren()
 local appMenu = menu:addContextMenuItem("E-Chatting",0x0)
-appMenu:addItem(localization.updateEntries).onTouch = function()
+appMenu:addItem("Update Entries").onTouch = function() --localization.updateEntries).onTouch = function()
   if userLoggedIn == true then
     updateEntries()
   else
-    GUI.alert(localization.developer.entryUpdateFail)
+    GUI.alert("Failed to update entries") --localization.developer.entryUpdateFail)
   end
 end
-appMenu:addItem(localization.addEntry, true).onTouch = function()
-  local container = GUI.addBackgroundContainer(workspace, true, true, localization.addEntry)
+appMenu:addItem("Add entry", true).onTouch = function()
+  local container = GUI.addBackgroundContainer(workspace, true, true, "echatting.developer.addEntry")
   local ign = container.layout:addChild(GUI.input(2, 2, 30, 3, 0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D))
   local alias = container.layout:addChild(GUI.input(2, 2, 30, 3, 0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D))
   local age = container.layout:addChild(GUI.input(2, 2, 30, 3, 0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D))
@@ -180,7 +181,7 @@ appMenu:addItem(localization.addEntry, true).onTouch = function()
   local server2 = container.layout:addChild(GUI.input(2, 2, 30, 3, 0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D))
   
   -- and a button to submit
-  local submit = container.layout:addChild(GUI.roundedButton(2, 18, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, localization.addEntry))
+  local submit = container.layout:addChild(GUI.roundedButton(2, 18, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "ok"))
   -- when submit clicked, add entry
   submit.onTouch = function()
 
@@ -199,9 +200,9 @@ appMenu:addItem(localization.addEntry, true).onTouch = function()
 
     if success then
       table.insert(entries, entry)
-      GUI.alert(localization.entryEditor.success)
+      GUI.alert("echatting.entryEditor.success")
     else
-        GUI.alert(localization.entryEditor.error)
+        GUI.alert("echatting.entryEditor.fail")
     end
   end
 end
@@ -216,21 +217,21 @@ local SETTINGS_PASSWORD = "branzy" -- Your E-Chatting password here
 -- Account status
 local SETTINGS_BANNED = false; -- wip, defines if account is banned
 local SETTINGS_BAN_INFO = {
-  moderatorNote = "Las imágenes de citas y envíos no están permitidas en Roblox.";
+  moderatorNote = "Please do advertise OCHammer 2!" --"Las imágenes de citas y envíos no están permitidas en Roblox.";
   offensiveItems = {
     {"other","download my virus"};
     {"other","plz"};
     {"other","github ocboy3/OC"};
     {"other","download ochammer2 virus"};
   };
-  banType = "warning";
+  banType = "note";
   showNumbers = false;
   showNumberSerious = nil; 
 }
 
 -- E-Chatting menu settings
 local QPANEL_ACCOUNT_NAME = "OCboy3"
-local QPANEL_ACCOUNT_AGE_RANGE = localization.qpanel.account_13plus
+local QPANEL_ACCOUNT_AGE_RANGE = "13+" --localization.qpanel.account_13plus
 
 -- compile the settings lol
 
@@ -240,31 +241,42 @@ SETTINGS_PHONE_NUMBER = SETTINGS_PHONE_NUMBER:gsub(" ", "")
 -- Menu
 
 appMenu:addItem(string.format(localization.qpanel.account, QPANEL_ACCOUNT_NAME, QPANEL_ACCOUNT_AGE_RANGE),true)
-appMenu:addItem(localization.settings,true)
+appMenu:addItem("Settings",true)
 appMenu:addSeparator()
-appMenu:addItem(localization.close,false,"^W").onTouch = function()
+appMenu:addItem("Close E-Chatting",false,"^W").onTouch = function()
   window:remove()
 end
-appMenu:addItem(localization.about).onTouch = function()
-  local aboutWindow = GUI.addBackgroundContainer(workspace, true, true, localization.about)
+appMenu:addItem("About").onTouch = function()
+  local aboutWindow = GUI.addBackgroundContainer(workspace, true, true, "About E-Chatting")
   local function aboutAdd(text)
     aboutWindow.layout:addChild(GUI.text(1, 1, 0xFFFF00, text))
   end
 
-  for i,v in pairs(localization.credits) do
+  local credits = {
+    "E-Chatting is a simple OpenComputers chat app that allows you to chat with minecraft players on the internet!";
+    "";
+    "Made by OCboy3";
+    "github: ocboy3/EChatting";
+    "E-Chatting is open source and licensed under the MIT license.";
+    "";
+    "(This app is not affiliated with Mojang or Minecraft.)";
+    "Credits: all entirely to me.";
+  };
+ 
+  for i,v in pairs(credits) do
     aboutAdd(v)
   end
 end
 
 -- add a input for username and password
-local greeting = addString(localization.misc.loginTitleWelcome)
-local subt1 = addString(localization.misc.loginSubtitle)
-local subt2 = addString(localization.misc.loginSubtitle2)
+local greeting = addString("Welcome to E-Chatting")
+local subt1 = addString("")
+local subt2 = addString("Please log in.")
 
-local username = layout:addChild(GUI.input(1, 1, 30, 3, 0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D, nil, localization.login.username))
-local password = layout:addChild(GUI.input(1, 1, 30, 3, 0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D, nil, localization.login.password, false, '•'))
+local username = layout:addChild(GUI.input(1, 1, 30, 3, 0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D, nil, "Username"))
+local password = layout:addChild(GUI.input(1, 1, 30, 3, 0xEEEEEE, 0x555555, 0x999999, 0xFFFFFF, 0x2D2D2D, nil, "Password", false, '•'))
 -- add login button
-local login = layout:addChild(GUI.roundedButton(1, 1, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, localization.login.confirm))
+local login = layout:addChild(GUI.roundedButton(1, 1, 30, 3, 0xFFFFFF, 0x555555, 0x880000, 0xFFFFFF, "Log in"))
 
 login.onTouch = function()
   -- if username is equal to email or phone number and password is equal to password then
@@ -282,7 +294,7 @@ login.onTouch = function()
     -- refresh entries
     updateEntries()
   else
-    GUI.alert(localization.login.failedLogin)
+    GUI.alert("Incorrect phone number and/or password")
   end
 end
 
