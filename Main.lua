@@ -33,7 +33,12 @@ Noskenē QR kodu ar telefonu lai skatītu
 https://link.echatting.lv/emsupport
 
 Another feature:
-idk
+GUI PFP viewer
+on profile click on user pfp, will show
+user Minecraft pfp because we have a png to
+ocif api
+
+wip
 
 --]]
 
