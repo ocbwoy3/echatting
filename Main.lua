@@ -5,30 +5,35 @@ local system = require("System")
 local event = require("Event")
 local internet = require("Internet")
 
--- E-Chatting development note
+-- E-Chatting development new features 
 
 --[[
 
-Rant:
+specific searches for certain things
+such as things related to things
+will show this on the app:
 
-LIFE IS HELL
-FIRST MY FAV YOUTUBER TECHNOBLADE DIES
-THEN QUEEN ELISABETH THE SECOND
-AND THEN MY DOG
+bilde: care.pic
 
-WHAT DID I DO TO DESERVE THE WORST YEAR OF MY LIFE THAT IS 2022 AND 2021
-GOD DID BAD THING BY GIVING ME THE WORST YEAR
+Tu neesi viens.
 
-UNDO 2022 AND 2021
+Ja tev vai taviem draugiem klājas grūti,
+mums ir palīdzība
 
-NOW NO PROGRESSION IN UNBOX A COMPUTER 2 WAS MADE BECAUSE OF THESE TRAGIC EVENTS
-JULY 1ST 2022 AND NOVEMBER 9TH 2022 WORST DAYS OF MY LIFE
-IF BRANZY DIES THEN IT WOULD BE WORST DAY OF MY LIFE BECAUS HES MY NEW FAV YOUTUBER
-AND UNBOX A COMPUTER 2 WILL BE CANCELLED
+Poga: [Skatīt resursus]
 
-MY DEATH = SOMEONE ELSE TAKING UNBOX A COMPUTER 2
+Ja uzspiež uz pogas:
 
-help
+E-Chatting
+
+ec.gui.qrcode VAI Veido QR kodu, lūdzu uzgaidiet
+
+Noskenē QR kodu ar telefonu lai skatītu
+
+https://link.echatting.lv/emsupport
+
+Another feature:
+idk
 
 --]]
 
