@@ -114,7 +114,7 @@ local userLoggedIn = false
 -- bruh man nav ko darīt pls dodiet idejas so boring tbh roans un gustavs ir npc
 
 local entries = {
-  {"BranzyCraft","Branzy",-1,4,'E-Chatting - Test',{'Lifesteal SMP','EchoCraft','Hypixel, I guess?'}};  
+  {"BranzyCraft","Branzy",-1,4,'E-Chatting - Test',{'Lifesteal SMP','EchoCraft','Hypixel, I guess?'}}; -- my favourite YouTuber 
   {"echatting-test","test account",-1,4,'test',{"Hypixel"}};
   {"OCboy3","echatting.locale.test_desc",-1,4,'echatting.locale.test_play',{"Hypixel"}};
 }
