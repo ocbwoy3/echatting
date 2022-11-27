@@ -1,0 +1,77 @@
+{
+  ["welcome"] = {
+    ["title1"] = "Sveicināti programmā E-Chatting!";
+    ["userinput"] = "E-Pasts vai telefona numurs";
+    ["passinput"] = "Parole";
+    ["login"] = "Pieslēgties";
+    ["forgot"] = "Konta atkopšana";
+    ["createaccount"] = "Izveidot kontu";
+  };
+  ["qrmenu"] = {
+    ["title"] = "E-Chatting";
+    ["generating"] = "Veido QR kodu, lūdzu uzgaidiet.";
+    ["ins1"] = "Noskenējiet QR kodu ar telefonu.";
+    ["ins2"] = "ez";
+  };
+  ["settings"] = {
+    ["genders"] = {
+      ["male"] = "Vīrietis";
+      ["female"] = "Sieviete";
+      ["nonbinary"] = "Neitrāls";
+      ["private"] = "echatting.locale.genders.private";
+    };
+    ["agegroups"] = {
+      ["under13"] = "<13";
+      ["over13"] = "13+";
+    };
+    ["nick"] = "Iesauka";
+    ["user"] = "Lietotājvārds";
+    ["email"] = "E-pasts";
+    ["number"] = "Tālrunis";
+    ["firstname"] = "Vārds";
+    ["lastname"] = "Uzvārds";
+  };
+  ["qpanel"] = {
+    ["ec_menu"] = "E-Chatting";
+    ["user"] = "%s (%s)";
+    ["settings"] = "Iestatījumi";
+    ["close"] = "Aizvērt E-Chatting";
+    ["closeKeys"] = "^W";
+    ["credits_title"] = "Par E-Chatting";
+    ["change_status"] = "Mainīt statusu";
+    ["credits"] = {
+      "Copyright (c) 2022 OCboy3";
+      "** VEIDOŠANAS VIDE, LIETOTNE VAR SALŪZT **";
+      "E-Chatting ir licencēta zem MIT licences.";
+      "GitHub: ocboy3/echatting";
+      "";
+      "Šo lietotni izveidoja:";
+      "OCboy3";
+      "";
+      "ATVĒRTĀ PIRMKODA LICENCES:";
+      "ocboy3/echatting-backend - MIT licence";
+      "ocboy3/qrcode-mineos - MIT licence";
+      ""
+    };
+  };
+  ["devmode"] = {
+    ["addEntry"] = "Pievienot ierakstu";
+    ["removeEntry"] = "Noņemt ierakstus";
+    ["refreshEntries"] = "Atsvaidzināt ierakstus";
+    ["ec_accountConfig"] = "Mainīt konta iestatījumus";
+    ["allowExternalFunctions"] = "Atļaut ārpusējās funkcijas";
+    ["entryEditor"] = {
+      ["title"] = "E-Chatting";
+      ["name"] = "Lietotājvārds";
+      ["nick"] = "Iesauka";
+      ["desc"] = "Neliels apraksts";
+      ["favServersEnabled"] = "Favorīta serveri?";
+      ["favServer"] = "%s. favorīta serveis";
+      ["selectEntry"] = "Izvēlēties ierakstu";
+      ["selectedEntry"] = "%s. %s";
+      ["deleteEntry"] = "Izdzēst ierakstu";
+      ["addEntry"] = "Pievienot ierakstu";
+      ["cancel"] = "Atcelt";
+    };
+  };
+}

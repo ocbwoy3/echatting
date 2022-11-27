@@ -1,0 +1,6 @@
+{
+  ["qpanel"] = {
+    ["ec_menu"] = "E-Chatting";
+    ["ec_user"] = "%s (%s)"
+  };
+}
