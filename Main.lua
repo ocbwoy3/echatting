@@ -101,7 +101,7 @@ ecLogin.onTouch = function()
 end
 
 ecReset.onTouch = function()
-  GUI.alert('CASE SENSITIVE. Nnumurs ir +371 TESTING\nEpasts ir ocboy3@echatting.lv\nParole ir branzy')
+  GUI.alert('CASE SENSITIVE. Nnumurs ir +371 TESTING\nEpasts ir testacc@echatting.lv\nParole ir branzy')
 end
 
 ecNew.onTouch = function()
