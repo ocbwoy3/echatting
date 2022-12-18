@@ -9,7 +9,9 @@ local internet = require("Internet")
 
 local function createQr(data)
   -- Koda optimizācijas
-  return require('qr').createPic(require('qr').encode(data))
+  local a = require('qr').createPic(require('qr').encode(data))
+  package.loaded['qr'] = nil
+  return a
 end
 
 -- Sākt E-Chatting initalizāciju
@@ -77,6 +79,40 @@ end
 
 ---------------------------------------------------------------------------------
 
+-- E-Chatting+
+
+local isBroke = true
+
+_G.ec_setBroke = function(a) isBroke = a end
+
+local function loginComplete()
+  layout:removeChildren()
+  local gftc1 = layout:addChild(GUI.text(1, 1, 0x4B4B4B, locale.giftcards.title))
+  local gftc2 = layout:addChild(GUI.text(1, 1, 0x4B4B4B, locale.giftcards.cost))
+  
+  local eccn = layout:addChild(GUI.input(1, 1, 30, 3, 0xEEEEEE, 0x000000, 0x999999, 0xFFFFFF, 0x2D2D2D, "", locale.buy.cc, false))
+  local eca1 = layout:addChild(GUI.input(1, 1, 30, 3, 0xEEEEEE, 0x000000, 0x999999, 0xFFFFFF, 0x2D2D2D, "", locale.buy.address1, false))
+  local eca2 = layout:addChild(GUI.input(1, 1, 30, 3, 0xEEEEEE, 0x000000, 0x999999, 0xFFFFFF, 0x2D2D2D, "", locale.buy.address2, false))
+  local ecpi = layout:addChild(GUI.input(1, 1, 30, 3, 0xEEEEEE, 0x000000, 0x999999, 0xFFFFFF, 0x2D2D2D, "", locale.buy.index, false))
+  local ecco = layout:addChild(GUI.input(1, 1, 30, 3, 0xEEEEEE, 0x000000, 0x999999, 0xFFFFFF, 0x2D2D2D, "", locale.buy.country, false))
+  local ecc2 = layout:addChild(GUI.input(1, 1, 30, 3, 0xEEEEEE, 0x000000, 0x999999, 0xFFFFFF, 0x2D2D2D, "", locale.buy.special, true, "•"))
+
+  local ecBuy = layout:addChild(GUI.roundedButton(2, 18, 30, 3, 0xFFFFFF, 0x555555, 0xE1E1E1, 0xFFFFFF, string.format(locale.buy.buyV,"1,5 EUR")))
+  ecBuy.onTouch = function()
+    if isBroke == false then
+      GUI.alert(locale.giftcards.ecplus)
+    else
+      GUI.alert(locale.buy.cceror)
+    end
+  end
+end
+
+
+
+
+
+---------------------------------------------------------------------------------
+
 -- Ielogošanās ekrāns.
 
 local ecWelcome = layout:addChild(GUI.text(1, 1, 0x4B4B4B, locale.welcome.title1))
@@ -87,25 +123,36 @@ local ecReset = layout:addChild(GUI.roundedButton(2, 18, 30, 1, 0xE1E1E1, 0x5555
 local ecNew = layout:addChild(GUI.roundedButton(2, 18, 30, 1, 0xE1E1E1, 0x555555, 0xE1E1E1, 0xFFFFFF, locale.welcome.createaccount))
 
 ecLogin.onTouch = function()
-  if ecUsername.Text:gsub(' ','') ~= ACCOUNT.number:gsub(' ','') then
-    GUI.alert('Nepareizs e-pasts, telefona numurs vai parole.')
-    return
-  elseif ecUsername.Text ~= ACCOUNT.email then
-    GUI.alert('Nepareizs e-pasts, telefona numurs vai parole.')
-  elseif ecPassword.Text ~= ACCOUNT.password then
-    GUI.alert('Nepareizs e-pasts, telefona numurs vai parole.')
-    return
-  else
-    qrcodePanel("NEUZTICATIES ERNESTAM VIŅŠ NAV ECHATTING ĪPAŠNIEKS!!!! ES ESMU (OCboy3) https://tiktok.com/@__ocboy3__",{'Noskenēniet QR kodu, izmantojot E-Chatting lietotni','vai app.echatting.lv/2sv'},'E-Chatting - Divpakāpju verifikācija')
+  local function passwd(reslt)
+    if ecPassword.text == ACCOUNT.password then
+      return reslt()
+    else
+      GUI.alert(locale.welcome.fail)
+    end
   end
+  local function xd()
+    qrcodePanel("NEUZTICATIES ERNESTAM VIŅŠ NAV ECHATTING ĪPAŠNIEKS!!!! ES ESMU (OCboy3) https://tiktok.com/@__ocboy3__",locale.qrmenu.ins,locale.qrmenu['2sv'])
+    loginComplete()
+    return nil
+  end
+  
+  if ecUsername.text:gsub(' ','') == ACCOUNT.number:gsub(' ','') then
+    return passwd(xd)
+  elseif ecUsername.text == ACCOUNT.email then
+    return passwd(xd)
+  else
+    GUI.alert(locale.welcome.fail)
+    return nil
+  end
+  GUI.alert('E-Chatting.LoginHandler kļūda: 0')
 end
 
 ecReset.onTouch = function()
-  GUI.alert('CASE SENSITIVE. Nnumurs ir +371 TESTING\nEpasts ir testacc@echatting.lv\nParole ir branzy')
+  GUI.alert('CASE SENSITIVE. Tel: +371 TESTING\ntestacc@echatting.lv\nParole ir branzy')
 end
 
 ecNew.onTouch = function()
-  qrcodePanel("MAN 7.I VNK BESĪ ĀRĀ KAD ES VARĒŠU IET PROM NO VIŅIEM",{"Noskenējiet QR kodu lai reģistrētos."},'Izveidot E-Chatting kontu')
+  qrcodePanel("MAN 7.I VNK BESĪ ĀRĀ KAD ES VARĒŠU IET PROM NO VIŅIEM",locale.qrmenu.ins,locale.qrmenu.newacc)
 end
 
 
