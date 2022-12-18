@@ -1,6 +1,99 @@
 {
+  ["welcome"] = {
+    ["title1"] = "Welcome to E-Chatting!";
+    ["userinput"] = "E-Mail or phone number";
+    ["passinput"] = "Password";
+    ["login"] = "Sign in";
+    ["forgot"] = "Recover account";
+    ["createaccount"] = "Sign up";
+    ["fail"] = "Incorrect E-Mail, phone number or password.";
+  };
+  ["giftcards"] = {
+    ["title"] = "Gift cards";
+    ["ins"] = "Codes, that give you E-Chatting+";
+    ["note"] = "Each gift card can be used once.";
+    ["XX-gftcard-XX"] = "Example: FFFFF-FFFFF-FFFFF (0-9, A-Z, all capital letters)";
+    ["ecplus"] = "Purchase successfull!\n Code: H817Q-XPZ12-64X1G (SAVE IMMEDIATLY)";
+    ["cost"] = "E-Chatting+ cost: 1.5 EUR/month";
+  };
+  ["buy"] = {
+    ["cc"] = "Credit card number";
+    ["address1"] = "1st address line (required)";
+    ["address2"] = "2nd address line";
+    ["index"] = "Post index (LV-3001)";
+    ["country"] = "Country";
+    ["special"] = "CVV/CVC2 (three digits)";
+    ["buy"] = "Buy";
+    ["buyV"] = "Buy (%s)";
+    ["cceror"] = "Credit card declined.";
+    ["ccnone"] = "Enter all information.";
+  };
+  ["qrmenu"] = {
+    ["title"] = "E-Chatting";
+    ["generating"] = "Creating QR code, please wait.";
+    ["ins"] = {"Scan the QR code with your phone."};
+    ["2sv"] = "E-Chatting 2 step verification";
+    ["newacc"] = "Create an E-Chatting account.";
+  };
+  ["settings"] = {
+    ["genders"] = {
+      ["male"] = "Male";
+      ["female"] = "Female";
+      ["nonbinary"] = "Non-Binary";
+      ["private"] = "echatting.locale.genders.private";
+    };
+    ["agegroups"] = {
+      ["under13"] = "<13";
+      ["over13"] = "13+";
+    };
+    ["nick"] = "Nickname";
+    ["user"] = "Username";
+    ["email"] = "E-Mail";
+    ["number"] = "Phone number";
+    ["firstname"] = "First name";
+    ["lastname"] = "Last name";
+  };
   ["qpanel"] = {
     ["ec_menu"] = "E-Chatting";
-    ["ec_user"] = "%s (%s)"
+    ["user"] = "%s (%s)";
+    ["settings"] = "Settings";
+    ["close"] = "Close E-Chatting";
+    ["closeKeys"] = "^W";
+    ["credits_title"] = "About E-Chatting";
+    ["change_status"] = "Change status";
+    ["credits"] = {
+      "Copyright (c) 2022 OCboy3";
+      "** DEVELOPMENT ENVIORMENT **";
+      "https://echatting.lv";
+      " ";
+      "E-Chatting is licenced under the MIT licence";
+      "GitHub: ocboy3/echatting";
+      "";
+      "This app was made by:";
+      "OCboy3";
+      "";
+      "OPEN SOURCE LICENCES:";
+      "ocboy3/echatting-util - MIT licence";
+    };
+  };
+  ["devmode"] = {
+    ["addEntry"] = "Add entry";
+    ["removeEntry"] = "Remove entry";
+    ["refreshEntries"] = "Update entries";
+    ["ec_accountConfig"] = "Change account settings";
+    ["allowExternalFunctions"] = "Set up external functions";
+    ["entryEditor"] = {
+      ["title"] = "E-Chatting";
+      ["name"] = "Username";
+      ["nick"] = "Nickname";
+      ["desc"] = "Description";
+      ["favServersEnabled"] = "Favourite servers?";
+      ["favServer"] = "#%s favourite server";
+      ["selectEntry"] = "Select an entry";
+      ["selectedEntry"] = "#%s %s";
+      ["deleteEntry"] = "Delete entry";
+      ["addEntry"] = "Add entry";
+      ["cancel"] = "Cancel";
+    };
   };
 }
