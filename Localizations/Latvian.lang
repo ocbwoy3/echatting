@@ -13,7 +13,7 @@
     ["ins"] = "Kodi, kuri dod tev E-Chatting+";
     ["note"] = "Dāvanu kartes ir vienreizēji lietojamas";
     ["XX-gftcard-XX"] = "Piemērs: FFFFF-FFFFF-FFFFF (0-9, A-Z, lielie burti)";
-    ["ecplus"] = "Pirkums pabeigts!\n Kods: H817Q-XPZ12-64X1G (SAGLABĀ MOMENTĀLI)";
+    ["ecplus"] = "Pirkums pabeigts!\n Kods: H817Q-XPZ12-64X1K (SAGLABĀ MOMENTĀLI)";
     ["cost"] = "E-Chatting+ cena: 1.5 EUR/mēn";
   };
   ["buy"] = {
@@ -62,8 +62,8 @@
     ["credits_title"] = "Par E-Chatting";
     ["change_status"] = "Mainīt statusu";
     ["credits"] = {
-      "Copyright (c) 2022 OCboy3";
-      "** VEIDOŠANAS VIDE, LIETOTNE VAR SALŪZT **";
+      "Copyright (c) 2022 ocboy3":
+      "** E-Chatting preview **";
       "https://echatting.lv";
       " ";
       "E-Chatting ir licencēta zem MIT licences.";
