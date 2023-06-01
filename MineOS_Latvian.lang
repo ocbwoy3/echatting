@@ -2,7 +2,7 @@
   downloading = "Lejuplādē",
   CPUArchitecture = "CPU arhitektūra'",
   RAMControl = "RAM kontrole",
-  packageUnloading = "Autom'ātiskā atlādēšana",
+  packageUnloading = "Automātiskā atlādēšana",
   networkFTPNewConnection = "FTP pieslēgums'",
   networkFTPConnections = "FTP pieslēgumi'",
   networkFTPAddress = "Servera adrese",
