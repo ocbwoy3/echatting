@@ -26,16 +26,17 @@ local ACCOUNT = {
   -- Lietotāja dati
   username = "OCboy3";
   nick = "OCboy3";
-  age = -1;
-  agegroup = "13+";
+  age = -1; -- -1 = privāts
+  agegroup = "13+"; -- vecuma grupa tikai drīkst būt 13+ jo >13 nav atļauts pēc echatting noteikumiem
+  -- vnk iedomājies šis ir discord vai instagram vnk šis nav roblox lol
   status = "Online";
   ec_developer = true;
   ec_special = "owner";
 
   -- Lietotājvārdi, paroles utt.
-  email = "testacc@echatting.lv";
-  number = "+371 TESTING";
-  password = "branzy";
+  email = "ocbwoy3@prikolshub.gg";
+  number = "+371 PRIKOLSHUB";
+  password = "Darktru <3";
   
   -- E-Chatting+ abonomenta statuss
   ecplus_tier = "E-Chatting+ Founder's edition"; -- skatoties pēc ecplus_prices
@@ -86,6 +87,12 @@ local isBroke = true
 _G.ec_setBroke = function(a) isBroke = a end
 
 local function loginComplete()
+  GUI.alert("the following buy echatting+ thing is not real and theres no internet")
+  GUI.alert("the luhn algorythm commonly used to validate cc's is not used here so u can pretty much make up any information and input it here lol")
+  GUI.alert("for example try this:\n1234 1234 1234 1234\n1 S. PrikolsHub Ave. - 999999\nRoom -0.01\nNorth Korea\n000")
+  GUI.alert("remember to go into lua app and do _G.ec_setBroke(false) if u dont want the fake info to be declined")
+  GUI.alert("thanx and pls follow my twitter @OCbwoy03\nand join the discord discord.gg/rz3raV8QPZ")
+  
   layout:removeChildren()
   local gftc1 = layout:addChild(GUI.text(1, 1, 0x4B4B4B, locale.giftcards.title))
   local gftc2 = layout:addChild(GUI.text(1, 1, 0x4B4B4B, locale.giftcards.cost))
@@ -131,7 +138,7 @@ ecLogin.onTouch = function()
     end
   end
   local function xd()
-    qrcodePanel("NEUZTICATIES ERNESTAM VIŅŠ NAV ECHATTING ĪPAŠNIEKS!!!! ES ESMU (OCboy3) https://tiktok.com/@__ocboy3__",locale.qrmenu.ins,locale.qrmenu['2sv'])
+    qrcodePanel("https://twitter.com/OCbwoy03",locale.qrmenu.ins,locale.qrmenu['2sv'])
     loginComplete()
     return nil
   end
@@ -148,7 +155,7 @@ ecLogin.onTouch = function()
 end
 
 ecReset.onTouch = function()
-  GUI.alert('CASE SENSITIVE. Tel: +371 TESTING\ntestacc@echatting.lv\nParole ir branzy')
+  GUI.alert('sorry i cant tell details rn pls take a look at the source code.\nhttps://raw.githubusercontent.com/ocboy3/echatting/main/Main.lua')
 end
 
 ecNew.onTouch = function()
