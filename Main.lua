@@ -24,8 +24,8 @@ local locale = system.getCurrentScriptLocalization()
 
 local ACCOUNT = {
   -- Lietotāja dati
-  username = "OCboy3";
-  nick = "OCboy3";
+  username = "ocbwoy3";
+  nick = "OCbwoy3";
   age = -1; -- -1 = privāts
   agegroup = "13+"; -- vecuma grupa tikai drīkst būt 13+ jo >13 nav atļauts pēc echatting noteikumiem
   -- vnk iedomājies šis ir discord vai instagram vnk šis nav roblox lol
@@ -34,9 +34,9 @@ local ACCOUNT = {
   ec_special = "owner";
 
   -- Lietotājvārdi, paroles utt.
-  email = "ocbwoy3@prikolshub.gg";
-  number = "+371 PRIKOLSHUB";
-  password = "Darktru <3";
+  email = "ocbwoy3@prikols.gg";
+  number = "+371 PRIKOLS";
+  password = "prikols";
   
   -- E-Chatting+ abonomenta statuss
   ecplus_tier = "E-Chatting+ Founder's edition"; -- skatoties pēc ecplus_prices
@@ -138,7 +138,7 @@ ecLogin.onTouch = function()
     end
   end
   local function xd()
-    qrcodePanel("https://twitter.com/OCbwoy03",locale.qrmenu.ins,locale.qrmenu['2sv'])
+    qrcodePanel("Join PrikolsHub ServerSide - The Free and Safe Roblox SS (Better than ExSer!) - https://discord.gg/GnBeUj6wGh",locale.qrmenu.ins,locale.qrmenu['2sv'])
     loginComplete()
     return nil
   end
@@ -151,15 +151,15 @@ ecLogin.onTouch = function()
     GUI.alert(locale.welcome.fail)
     return nil
   end
-  GUI.alert('E-Chatting.LoginHandler kļūda: 0')
+  GUI.alert('prikolshub: https://discord.gg/GnBeUj6wGh')
 end
 
 ecReset.onTouch = function()
-  GUI.alert('sorry i cant tell details rn pls take a look at the source code.\nhttps://raw.githubusercontent.com/ocboy3/echatting/main/Main.lua')
+  GUI.alert('Password: prikols\nUserName: ocbwoy3@prikols.gg\nPhone: +371 TESTING')
 end
 
 ecNew.onTouch = function()
-  qrcodePanel("MAN 7.I VNK BESĪ ĀRĀ KAD ES VARĒŠU IET PROM NO VIŅIEM",locale.qrmenu.ins,locale.qrmenu.newacc)
+  qrcodePanel("https://discord.gg/GnBeUj6wGh",locale.qrmenu.ins,locale.qrmenu.newacc)
 end
 
 
